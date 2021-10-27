@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/545d8b5bdc.js" crossorigin="anonymous"></script>
+	
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<title>Travel</title>
+</head>
+
+<body>
+	<div id="wrapper" class="wrapper">
+		<header>
+			<h2 class="logo">Travel Guide</h2>
+			<div class="toggle"></div>
+			<div class="menu ">
+				<ul>
+					<li><a href="#district">Explore</a></li>
+					<li><a href="chatbot.php">Chatbot</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="index2.html">Filter</a></li>
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+			<script>
+				const menuToggle = document.querySelector('.toggle');
+				const showcase = document.querySelector('.menu');
+				menuToggle.addEventListener('click', () => {
+					menuToggle.classList.toggle('active')
+					showcase.classList.toggle('active');
+				})
+			</script>
+		</header>
+		<section class="section__intro">
+			<video autoplay="true" muted="true" loop="true">
+				<source src="videos\bg1.mp4" type="video/mp4">
+			</video>
+			<div class="quote">
+				<h2>Never Stop Exploring the world</h2>
+                <p>Life is a journey!... Enjoy every bit of that journey and you will be happy that you reached the destination you desired...!</p>
+				<a href="#district">Explore</a>
+				<div class="searchbar">
+					<input type="text" placeholder="Type to search..">
+					<div class="autocom-box">
+					</div>
+					<a id="link2">
+						<div class="icon1"><i class="fas fa-search"></i></div>
+					</a>
+				</div>
+			</div>
+        <script src="js/suggestions.js"></script>
+		<script src="js/script.js"></script>
+			
+		</section>
+		<hr>
+		<section class="section2">
+			<div class="box">
+				<div class="mahainfo">
+					<h1 class="ti">MAHARASHTRA</h1>
+					<p>The spirit of Maharashtra is cosmopolitan, forward-thinking, tolerant and vibrant. There is enough to keep connoisseurs of temples, forts, old monuments and art---gainfully preoccupied here. Forts have played a vital role in the history of the state, given the rocky terrain of the Sahyadris. Each fort marks a military triumph, and each tells a story of strategy, warfare, intrigue and planning. All of them reconstruct the tale of an enterprising leader , Chhatrapati Shivaji- in the Deccan arena, who with fortitude went onto become one of the tallest kings of Indian history. Bombay or Mumbai—the capital of Maharashtra is not only seen as the financial capital of India, but is literally the Gateway of India which is secular, progressive yet rooted. It is also home to the largest film industry in the world, an industry whose turnover is more than that of the GDP of several small nations. The film industry in Mumbai sees thousands thronging to the city every year, hoping to make it big. Maharashtra is home to several National Parks. Project Tiger has 4 major areas of concentration in the state namely Tadoba-Andhari, Melghat, Sahyadri and Pench. A large percentage of Maharashtra's forests and wildlife lie along the Western Ghats or Western Maharashtra and eastern Vidarbha. The Sahyadris hold several beautiful hill stations in their lap, which are cool, beautiful and refreshingly serene. Best of all, they are usually near a city. The experience of Maharashtra is diverse and rich with colourful cultures, woven into one gigantic quilt. The festivals here galvanise the sleepy thousands into fervent motion. The traveller will definitely fall in love with the miles of silver, white beaches, stretched throughout the Western coast. <br>
+
+						<span>Welcome aboard a travel experience that gives you a glimpse into this vibrant and beautiful land.</span> <br>
+						<span>Welcome to Maharashtra. A land untouched, unsullied, unlimited.</span>
+					</p>
+				</div>
+				<div class="mahamap">
+					<h2>Location Of District</h2>
+					<div id="map"></div>
+				</div>
+				<script>
+					var map;
+					const Maharashtra_BOUNDS = {
+						north: 22.59,
+						south: 13.99,
+						west: 69.97,
+						east: 83.09,
+					};
+
+					function initMap() {
+						map = new google.maps.Map(document.getElementById("map"), {
+							center: {
+								lat: 19.51650292323234,
+								lng: 76.2226964198078
+							},
+							zoom: 6,
+							mapId: 'f74dcc2ad06c520e',
+							zoomControl: true,
+							draggable: true,
+							fullscreenControl: false,
+							restriction: {
+								latLngBounds: Maharashtra_BOUNDS,
+								strictBounds: true,
+							},
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.82453683928397,
+								lng: 73.02227326469286
+							},
+							map,
+							title: "Palghar",
+							onclick: "openfacebook()",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.4555,
+								lng: 74.40566
+							},
+							map,
+							title: "Ahmednagar",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.70035,
+								lng: 77.10249
+							},
+							map,
+							title: "Akola",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.11621,
+								lng: 77.65361
+							},
+							map,
+							title: "Amravati",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.89108,
+								lng: 75.15453
+							},
+							map,
+							title: "Aurangabad",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.92195,
+								lng: 75.8069
+							},
+							map,
+							title: "Beed",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.07364,
+								lng: 79.82967
+							},
+							map,
+							title: "Bhandara",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.45609,
+								lng: 76.36372
+							},
+							map,
+							title: "Buldhana",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.20952,
+								lng: 79.56034
+							},
+							map,
+							title: "Chandrapur",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.05765,
+								lng: 74.68688
+							},
+							map,
+							title: "Dhule",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.49687,
+								lng: 80.27673
+							},
+							map,
+							title: "Gadchiroli",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.28353,
+								lng: 80.1875
+							},
+							map,
+							title: "Gondia",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.57814,
+								lng: 77.10249
+							},
+							map,
+							title: "Hingoli",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.00765,
+								lng: 75.5626
+							},
+							map,
+							title: "Jalgaon",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.6807,
+								lng: 75.99276
+							},
+							map,
+							title: "Jalna",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 16.57644,
+								lng: 74.12399
+							},
+							map,
+							title: "Kolhapur",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.43275,
+								lng: 76.73365
+							},
+							map,
+							title: "Latur",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.01761,
+								lng: 72.85612
+							},
+							map,
+							title: "Mumbai",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.15382,
+								lng: 72.87517
+							},
+							map,
+							title: "Mumbai Suburban",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.31701,
+								lng: 79.19999
+							},
+							map,
+							title: "Nagpur",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.94378,
+								lng: 77.37837
+							},
+							map,
+							title: "Nanded",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 21.74685,
+								lng: 74.12399
+							},
+							map,
+							title: "Nandurbar",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.16235,
+								lng: 74.03001
+							},
+							map,
+							title: "Nashik",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.18533,
+								lng: 76.04196
+							},
+							map,
+							title: "Osmanabad",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.2644,
+								lng: 76.64127
+							},
+							map,
+							title: "Parbhani",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.68325,
+								lng: 74.03001
+							},
+							map,
+							title: "Pune",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 18.51575,
+								lng: 73.18216
+							},
+							map,
+							title: "Raigad",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 17.24775,
+								lng: 73.37086
+							},
+							map,
+							title: "Rantnagiri",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 17.17066,
+								lng: 74.68688
+							},
+							map,
+							title: "Sangli",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 17.578,
+								lng: 74.03001
+							},
+							map,
+							title: "Satara",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 16.34921,
+								lng: 73.55941
+							},
+							map,
+							title: "Sindhudurg",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 17.69567,
+								lng: 75.52766
+							},
+							map,
+							title: "Solapur",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 19.45403,
+								lng: 73.37086
+							},
+							map,
+							title: "Thane",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.80491,
+								lng: 78.56608
+							},
+							map,
+							title: "Wardha",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.13901,
+								lng: 77.10249
+							},
+							map,
+							title: "Washim",
+						});
+						new google.maps.Marker({
+							position: {
+								lat: 20.11695,
+								lng: 78.11082
+							},
+							map,
+							title: "Yavatmal",
+						});
+					}
+				</script>
+			</div>
+			<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuGFiN6EtGxM0lF-O-JUOOLHkpOFGhTF8&map_ids=f74dcc2ad06c520e&callback=initMap">
+			</script>
+	</div>
+	</section>
+	<hr>
+	<section class="section3" id="district">
+		<div class="districtof">
+			District To Visit In Maharshtra
+		</div>
+
+		<a href="Ahmednagar\Ahmednagar.html">
+			<div class="districtname">
+				<img src="images\ahmendnagar.jpg" alt="ahmendnagar">
+				<h4>Ahmednagar</h4>
+			</div>
+		</a>
+		<a href="Akola\Akola.html">
+			<div class="districtname">
+				<img src="images/akola.jpg" alt="akola">
+				<h4>Akola</h4>
+			</div>
+		</a>
+		<a href="Amravati\Amravati.html">
+			<div class="districtname">
+				<img src="images/amravti.jpg" alt="Amravati">
+				<h4>Amravati</h4>
+			</div>
+		</a>
+		<a href="Aurangabad\Aurangabad.html">
+			<div class="districtname">
+				<img src="images/aurangabad.jpg" alt="Aurangabad">
+				<h4>Aurangabad</h4>
+			</div>
+		</a>
+		<a href="Beed\Beed.html">
+			<div class="districtname">
+				<img src="images/Beed.jpg" alt="Beed">
+				<h4>Beed</h4>
+			</div>
+		</a>
+		<a href="Bhandara\Bhandara.html">
+		<div class="districtname">
+			<img src="images/Bhandara.pjg.jpg" alt="Bhandara">
+			<h4>Bhandara</h4>
+		</div>
+		</a>
+		<a href="Buldhana\Buldhana.html">
+			<div class="districtname">
+				<img src="images/Buldhana.jpg" alt="Buldhana">
+				<h4>Buldhana</h4>
+			</div>
+		</a>
+		<a href="chandrapur/chandrapur.html">
+		<div class="districtname">
+			<img src="images/Chandrapur.jpg" alt="Chandrapur">
+			<h4>Chandrapur</h4>
+			</div>
+		</a>
+		<a href="Dhule\Dhule.html">
+			<div class="districtname">
+				<img src="images/Dhule.jpg" alt="Dhule">
+				<h4>Dhule</h4>
+			</div>
+		</a>
+		<div class="districtname">
+			<img src="images/Gadchiroli.jpg" alt="Gadchiroli">
+			<h4>Gadchiroli</h4>
+		</div>
+		<a href="Gondia/Gondia.html">
+		<div class="districtname">
+			<img src="images/Gondia.jpg" alt="Gondia">
+			<h4>Gondia</h4>
+		</div>
+		<a href="Hingoli\Hingoli.html">
+			<div class="districtname">
+				<img src="images/Hingoli.jpg" alt="HinGoli">
+				<h4>Hingoli</h4>
+			</div>
+		</a>
+		<a href="Jalgaon\Jalgaon.html">
+			<div class="districtname">
+				<img src="images/Jalgaon.jpg" alt="Jalgaon">
+				<h4>Jalgaon</h4>
+			</div>
+		</a>
+		<a href="Jalna\Jalna.html">
+			<div class="districtname">
+				<img src="images/Jalna.jpg" alt="Jalna">
+				<h4>Jalna</h4>
+			</div>
+		</a>
+		<a href="Kolhapur\Kolhapur.html">
+			<div class="districtname">
+				<img src="images/Kolhapur.jpg" alt="Kolhapur">
+				<h4>Kolhapur</h4>
+			</div>
+		</a>
+		<a href="Latur\Latur.html">
+			<div class="districtname">
+				<img src="images/Latur.jpg" alt="Latur">
+				<h4>Latur</h4>
+			</div>
+		</a>
+		<a href="Mumbai City\MUMBAI City.html">
+			<div class="districtname">
+				<img src="images/Mumbai City.jpg" alt="Mumbai city">
+				<h4>Mumbai City</h4>
+			</div>
+		</a>
+		<a href="Mumbai Suburban\Mumbai Suburban.html">
+			<div class="districtname">
+				<img src="images/Mumbai Suburban.jpg" alt="Mumbai Suburban">
+				<h4>Mumbai Suburban</h4>
+			</div>
+		</a>
+		<div class="districtname">
+			<img src="images/Nagpur.jpg" alt="Nagpur">
+			<h4>Nagpur</h4>
+		</div>
+		<a href="Nanded\Nanded.html">
+			<div class="districtname">
+				<img src="images/Nanded.jpg" alt="Nanded">
+				<h4>Nanded</h4>
+			</div>
+		</a>
+		<a href="Nandurbar\Nandurbar.html">
+			<div class="districtname">
+				<img src="images/Nandurbar.jpg" alt="Nandurbar">
+				<h4>Nandurbar</h4>
+			</div>
+		</a>
+		<a href="Nashik\Nashik.html">
+			<div class="districtname">
+				<img src="images/Nashik.jpg" alt="Nashik">
+				<h4>Nashik</h4>
+			</div>
+		</a>
+		<a href="Osmanabad\Osmanabad.html">
+			<div class="districtname">
+				<img src="images/Osmanabad.jpg" alt="Osmanabad">
+				<h4>Osmanabad</h4>
+			</div>
+		</a>
+		<a href="Palghar\Palghar.html">
+			<div class="districtname">
+				<img src="images/Palghar.jpg" alt="Palghar">
+				<h4>Palghar</h4>
+			</div>
+		</a>
+		<a href="Parbhani\Parbhani.html">
+			<div class="districtname">
+				<img src="images/Parbhani.jpg" alt="Parbhani">
+				<h4>Parbhani</h4>
+			</div>
+		</a>
+		<a href="Pune\Pune.html">
+			<div class="districtname">
+				<img src="images/Pune.jpg" alt="Pune">
+				<h4>Pune</h4>
+			</div>
+		</a>
+		<a href="Raigad\Raigad.html">
+			<div class="districtname">
+				<img src="images/Raigad.jpg" alt="Raigad">
+				<h4>Raigad</h4>
+			</div>
+		</a>
+		<a href="Ratnagiri\Ratnagiri.html">
+			<div class="districtname">
+				<img src="images/Ratnagiri.jpg" alt="Ratnagiri">
+				<h4>Ratnagiri</h4>
+			</div>
+		</a>
+		<a href="Sangli\Sangli.html">
+			<div class="districtname">
+				<img src="images/Sangli.jpg" alt="Sangli">
+				<h4>Sangli</h4>
+			</div>
+		</a>
+		<a href="Satara\Satara.html">
+			<div class="districtname">
+				<img src="images/sataraa.jpg" alt="satara">
+				<h4>Satara</h4>
+			</div>
+		</a>
+		<a href="Sindhudurg\Sindhudurg.html">
+			<div class="districtname">
+				<img src="images/Sindhudurg.jpg" alt="Sindhudurg">
+				<h4>Sindhudurg</h4>
+			</div>
+		</a>
+		<a href="Solapur\Solapur.html">
+			<div class="districtname">
+				<img src="images/Solapur.jpg" alt="Solapur">
+				<h4>Solapur</h4>
+			</div>
+		</a>
+		<a href="Thane\Thane.html">
+			<div class="districtname">
+				<img src="images/Thane.jpg" alt="Thane">
+				<h4>Thane</h4>
+			</div>
+		</a>
+		<a href="Wardha\Wardha.html">
+		<div class="districtname">
+			<img src="images/Wardha.jpg" alt="Wardha">
+			<h4>Wardha</h4>
+		</div>
+		</a>
+		<a href="Washim\Washim.html">
+			<div class="districtname">
+				<img src="images/Washim.jpg" alt="Washim">
+				<h4>Washim</h4>
+			</div>
+		</a>
+		<a href="Yavatmal\Yavatmal.html">
+			<div class="districtname">
+				<img src="images/Yavatmal.jpg" alt="Yavatmal">
+				<h4>Yavatmal</h4>
+			</div>
+		</a>
+		<div class="districtafter"></div>
+	</section>
+	<hr>
+	<section class="about" id="about">
+		<div class="box2">
+			<h1>Travel Guide</h1>
+			<h5>Tourism</h5>
+			<p>
+				The goal of every travel guide is to help potential travelers prepare for their journey and have the best possible trip. A travel guide should be informative, but it can also be interesting or inspiring. Take a closer look at some of the most common types of travel guides as well as the benefits of each.
+				professionals also handle the group’s transportation, accommodations, and even meals and more often than not travels with the group and stays in the same accommodations. They also solve any problems that may arise both before and during the tour and make sure the clients are satisfied and taken care of throughout their travels, especially those individuals with special needs. They handle stressful situations well and are flexible and professional at all times.
+			</p>
+			<ul>
+				<li>
+					<a href="#"><i class="fab fa-facebook" onclick="openfacebook()"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fab fa-twitter-square" onclick="openTwitter()"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fab fa-instagram-square" onclick="openInstagram()"></i></a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<section class="contact" id="contact">
+		<div class="contactus">
+			<h2>Contact Us</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore odio,
+				iusto officiis repudiandae nemo laborum itaque explicabo
+			</p>
+		</div>
+		<div class="conta">
+			<div class="contactInfo">
+				<div class="box1">
+					<div class="icon">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					</div>
+					<div class="text">
+						<h3>Address</h3>
+						<p>
+							Lorem, ipsum dolor sit amet , <br />consectetur adipisicing ,<br />420192
+						</p>
+					</div>
+				</div>
+				<div class="box1">
+					<div class="icon">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+					</div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p>+91 9782345160</p>
+					</div>
+				</div>
+				<div class="box1">
+					<div class="icon">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>201901049.varunsml@student.xavier.ac.in</p>
+					</div>
+				</div>
+			</div>
+			<div class="contactForm">
+				<form>
+					<h2>Send Messages</h2>
+					<div class="inputBox">
+						<input type="text" name="" required />
+						<span>Full Name</span>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="" required />
+						<span>Email</span>
+					</div>
+					<div class="inputBox">
+						<textarea required></textarea>
+						<span>Type your Message...</span>
+					</div>
+					<div class="inputBox">
+						<input type="submit" name="" value="Send" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+</body>
+
+</html>

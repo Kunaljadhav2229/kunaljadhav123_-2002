@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins',sans-serif;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0px 100px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(252, 209, 209, 0.685);
+	opacity: 1;
+	}
+	.section__intro{
+	position: relative;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(233, 227, 227);
+	}
+	.logo{
+		text-transform: uppercase;
+		cursor: pointer;
+		font-size: 2.5em;
+		font-weight: 500;
+		font-family: -webkit-body;
+		font-style: italic;
+	}
+	.logo:hover{
+		letter-spacing: 4px;
+	}
+	.toggle {
+		position: relative;
+		width: 60px;
+		height: 60px;
+		background: url('../images/30.png');
+		background-repeat: no-repeat;
+		background-size: 50px;
+		background-position: center;
+		cursor: pointer;
+	}
+	
+	.toggle.active
+	{
+	  background: url('../images/close.png');
+	  
+	  background-repeat: no-repeat;
+	  background-size: 25px;
+	  background-position: center;
+	  cursor: pointer;
+	}
+	
+	.menu{
+		visibility: hidden;
+		margin-top: 8px;
+		text-transform: uppercase;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+		left : 40%;
+		opacity: 0;
+		 transition: 0.7s;
+	
+	}
+	
+	.menu.active{
+		visibility: visible;
+	
+		opacity: 1;
+	}
+	.menu ul li{
+		list-style: none;
+		display: inline-block;
+		
+		margin-right: 20px;
+	
+	}
+	.menu form{
+		font-size: 12px;
+	}
+	 .menu form.example input[type=text] {
+	  padding: 10px;
+	  font-size: 12px;
+	  border: 1px solid grey;
+	  float: left;
+	  width: 70%;
+	  background: transparent;
+	}
+	.menu form.example button {
+	 float: left;
+	  width: 20%;
+	  padding: 10px;
+	  background: #2196F3;
+	  color: white;
+	  font-size: 12px;
+	  border: 1px solid grey;
+	  border-left: none; /* Prevent double borders */
+	  cursor: pointer;
+	}
+	.menu form.example button:hover {
+	  background: #0b7dda;
+	}
+	
+	.menu form.example::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+	
+	.menu ul li a{
+		background: transparent;
+		text-decoration: none;
+		font-size: 24px;
+		color: rgb(0, 0, 0);
+	}
+	.menu ul li a:hover{
+		color: #f00;
+	}
+	.section__intro video{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 1;
+	}
+
+	.overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.quote{
+		bottom: 0%;
+		left : 17%;
+		right: 0%;
+		position: relative;
+		width: 70%;
+		z-index: 20;
+	
+	}
+	.quote h2{
+		cursor: default;
+		font-style: italic;
+		font-size: 3.0em;
+		font-weight: 500;
+		line-height: 1em;
+		text-transform: uppercase;
+	}
+	
+	.quote p{
+		cursor: default;
+		font-size: 1.1em;
+		margin: 20px 0;
+		font-weight: 400;
+	}
+	 .quote a{
+		 display: inline-block;
+		 font-size: 1em;
+		 background: hsla(308, 100%, 87%, 0.973);
+		 padding: 10px 30px;
+		 text-decoration: none;
+		 color: #000000;
+		 margin-top: 10px;
+		 text-transform: uppercase;
+		 letter-spacing: 2px;
+		 transition: 0.2s;
+		 font-weight: 400;
+	
+	 }
+	 .quote a:hover{
+		 letter-spacing: 4px;
+	 }
+     .quote .searchbar{
+		  position: relative;
+          left: 30%;
+          margin-top: 30px;
+		  background: #fff;
+		  width: 300px;
+		  border-radius: 5px;
+		  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+	 }
+
+	.searchbar input{
+		height: 50px;
+		width: 100%;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		padding: 0 60px 0 20px;
+		font-size: 18px;
+		box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	}
+
+	.searchbar #link2{
+		margin-right: 20px;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		background: none;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.searchbar .icon1{
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: center;
+		font-size: 20px;
+		color: #0b7dda;
+		cursor: pointer;
+	}
+	.searchbar .autocom-box{
+	 padding: 0; 
+		max-height: 280px;
+		overflow-y: auto;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+    .searchbar.active  .autocom-box{
+		padding: 10px 8px;
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.autocom-box li{
+		list-style: none;
+		padding: 8px 12px;
+		width: 100%;
+		cursor: default;
+		border-radius: 3px;
+		display: none;
+	}
+    
+    .searchbar.active  .autocom-box li{
+		display: block;
+	}
+
+	.autocom-box li:hover{
+		background: #81968e;
+	}
+ 
+
+    .box{
+		display: inline-block;
+		width: 100%;
+		height: 500px;
+	}
+	.mahainfo{
+		padding: 15px;
+		margin-left: 30px;
+		display: inline-block;
+		width: 920px;
+		height: 500px;
+	}
+	.mahainfo .ti {
+	 text-align: center;
+	 font-weight: 1000;
+	 padding-bottom: 5px;
+	 text-decoration: underline;
+	text-decoration-thickness: 2px;
+	}
+	.mahainfo p{
+		font-family: 'Poppins',sans-serif;
+	}
+	.mahainfo span{
+        text-align: center;
+		font-style: italic;
+		font-weight: 900;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-decoration-color: chartreuse;
+		text-decoration-skip: none;
+	}
+	.mahamap{
+		margin-right: 50px;
+		margin-top: 50px;
+		height: 500px;
+		width: 500px;
+        float: right;
+		text-align: center;
+	    text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-decoration-color: chartreuse;
+	}
+ #map{
+	float:right;
+      height: 400px;
+      width: 500px;
+  }
+
+ .section3{
+	margin: 5px;
+    height: 950px;
+	display: grid;
+	grid-template-rows: 115px 115px 115px 115px 115px 115px 115px 115px;
+	grid-template-columns: 240px 240px 240px 240px 240px 240px ;
+	grid-row-gap: 7px;
+	grid-column-gap: 5px;
+	border: 3px solid gold;
+ }
+ .section3 .districtof{
+	 align-self: center;
+	 grid-column: 1/span 6;
+	 justify-self: center;
+	 font-size: 30px;
+	 font-weight: 900;
+	 color: #000;
+	 text-decoration: solid;
+	 text-decoration: underline;
+	text-decoration-thickness: 2px;
+ }
+.section3 a{
+  color: #000000;
+  text-decoration: none;
+}
+ .districtname{
+	cursor: pointer;
+ }
+  
+
+ .districtname img{
+    width: 235px;
+	height: 90px;
+ }
+
+ .districtname h4{
+	 text-align: center;
+ }
+ .about{
+	margin: 0;
+	padding: 0;
+	background: url(background.jpg) no-repeat;
+	background-size: cover;
+ }
+ .box2{
+	width: 450px;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 40px;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+	color: white;
+	font-family: 'Century Gothic',sans-serif;
+  }
+  .box2-img{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+  }
+  .box2 h1{
+	font-size: 40px;
+	letter-spacing: 4px;
+	font-weight: 100;
+  }
+  .box2 h5{
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-weight: 100;
+  }
+  .box2 p{
+	text-align: justify;
+  }
+  ul{
+	margin: 0;
+	padding: 0;
+  }
+  .box2 li{
+	display: inline-block;
+	margin: 6px;
+	list-style: none;
+  }
+  .box2 li a{
+	color: rgb(216, 240, 0);
+	text-decoration: none;
+	font-size: 60px;
+	transition: all ease-in-out 250ms;
+  }
+  .box2 li a:hover{
+	color: #b9b9b9;
+  }
+  .contact::before{
+	  content:'';
+	  height: 20px;
+  }
+  .about::after{
+	content:'';
+	height: 20px;
+  }
+ .contact{
+    position: relative;
+    min-height:100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(contact.jpg);
+    background-size: cover;
+}
+
+.contact .contactus{
+    max-width: 800px;
+    text-align: center;
+}   
+.contact  .contactus h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact  .contactus p{
+    font-weight: 300;
+    color: #fff;
+}
+
+.conta{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.conta .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conta .contactInfo .box1{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.conta .contactInfo .box1 .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.conta .contactInfo .box1 .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight:300;
+}
+
+.conta .contactInfo .box1 .text h3{
+    font-weight: 900;
+    color: #bf0;
+}
+
+.contactForm{
+    width:40%;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input, .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+
+.contactForm .inputBox input[type = "submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media  (max-width: 991px) {
+  .contact{
+      padding:50px
+  }    
+  .conta{
+      flex-direction: column;
+  }
+  .conta .contactInfo{
+      margin-bottom: 40px;
+  }
+  .conta .contactInfo,
+  .contactForm{
+      width:100%;
+  }
+  
+ 
+}
